@@ -1,9 +1,9 @@
 /* ==========================================================================
    TeraRobots India - Modern SaaS & Industry 4.0 Stylesheet
-   Designed to match the ultra-clean, modern aesthetic of the reference UI
+   Designed to match the reference UI layout while using 100% authentic
+   TeraRobots India content, photography, and services.
    ========================================================================== */
 
-/* --- CSS Variables & Design Tokens --- */
 :root {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif-italic: 'Newsreader', 'Playfair Display', Georgia, serif;
@@ -11,7 +11,7 @@
   --color-bg: #fbfcfd;
   --color-bg-alt: #f4f6f9;
   --color-surface: #ffffff;
-  --color-surface-glass: rgba(255, 255, 255, 0.72);
+  --color-surface-glass: rgba(255, 255, 255, 0.78);
   --color-surface-glass-border: rgba(255, 255, 255, 0.9);
   
   --color-primary: #0f172a;
@@ -23,16 +23,15 @@
   --color-accent-pink: #ec4899;
   
   --color-text-main: #0f172a;
-  --color-text-muted: #64748b;
+  --color-text-muted: #475569;
   --color-text-subtle: #94a3b8;
-  --color-border: rgba(226, 232, 240, 0.8);
+  --color-border: rgba(226, 232, 240, 0.85);
   --color-border-dark: rgba(255, 255, 255, 0.12);
   
   --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 12px 32px -10px rgba(15, 23, 42, 0.07);
-  --shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.1);
-  --shadow-glass: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
-  --shadow-glow-blue: 0 0 40px rgba(56, 189, 248, 0.25);
+  --shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.12);
+  --shadow-glass: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
   
   --radius-sm: 12px;
   --radius-md: 20px;
@@ -67,7 +66,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- Typography Helpers --- */
+/* --- Typography --- */
 .italic-accent {
   font-family: var(--font-serif-italic);
   font-style: italic;
@@ -98,7 +97,6 @@ img {
   display: block;
 }
 
-/* --- Layout Container --- */
 .container {
   width: 100%;
   max-width: 1240px;
@@ -119,12 +117,13 @@ img {
   }
 }
 
-/* --- Badges / Pills --- */
+/* --- Pills & Badges --- */
 .badge-row {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .pill-badge {
@@ -189,17 +188,17 @@ img {
 .btn-dark {
   background: var(--color-primary);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
 }
 
 .btn-dark:hover {
   background: var(--color-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.22);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.24);
 }
 
 .btn-outline {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   color: var(--color-text-main);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(8px);
@@ -208,10 +207,10 @@ img {
 .btn-outline:hover {
   background: #ffffff;
   border-color: var(--color-primary);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-/* --- Floating Pill Navigation (Matching Mockup) --- */
+/* --- Floating Pill Navigation --- */
 .nav-wrapper {
   position: fixed;
   top: 24px;
@@ -229,7 +228,7 @@ img {
   display: flex;
   align-items: center;
   gap: 28px;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.84);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid var(--color-surface-glass-border);
@@ -251,7 +250,6 @@ img {
   font-weight: 600;
   color: var(--color-text-muted);
   transition: color var(--transition-fast);
-  position: relative;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -259,15 +257,15 @@ img {
 }
 
 .nav-brand-icon {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: #0f172a;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform var(--transition-fast);
 }
 
@@ -276,8 +274,8 @@ img {
 }
 
 .nav-brand-icon img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
@@ -291,13 +289,12 @@ img {
   color: var(--color-text-main);
 }
 
-/* Mobile Drawer */
 .mobile-nav-drawer {
   position: fixed;
   top: 84px;
   left: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(24px);
   border-radius: var(--radius-lg);
   padding: 24px;
@@ -321,7 +318,7 @@ img {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-@media (max-width: 820px) {
+@media (max-width: 840px) {
   .nav-links {
     display: none;
   }
@@ -334,19 +331,19 @@ img {
   }
 }
 
-/* --- Hero Section (Matches Left Mockup) --- */
+/* --- Hero Section (Matches Reference Mockup) --- */
 .hero-section {
   position: relative;
   padding-top: 140px;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
   overflow: hidden;
   background: radial-gradient(ellipse 90% 70% at 50% -10%, rgba(56, 189, 248, 0.28) 0%, rgba(224, 242, 254, 0.35) 30%, rgba(248, 250, 252, 0) 75%);
 }
 
 .hero-header {
   text-align: center;
-  max-width: 820px;
-  margin: 0 auto 36px auto;
+  max-width: 860px;
+  margin: 0 auto 40px auto;
   position: relative;
   z-index: 2;
 }
@@ -362,67 +359,85 @@ img {
 
 .hero-title .italic-accent {
   font-weight: 400;
-  color: #0369a1;
+  color: #0284c7;
   display: inline-block;
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
   color: #475569;
-  max-width: 640px;
-  margin: 0 auto 28px auto;
-  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto 32px auto;
+  line-height: 1.65;
 }
 
-.hero-cta {
-  display: inline-flex;
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
   margin-bottom: 48px;
 }
 
-/* Hero Visual & Glassmorphic Overlay Stage */
+/* Hero Stage & Authentic Robotics Showcase */
 .hero-stage-container {
   position: relative;
   max-width: 1080px;
   margin: 0 auto;
   border-radius: var(--radius-xl);
-  overflow: visible;
 }
 
-.hero-image-wrapper {
+.hero-showcase-card {
   position: relative;
   border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 30px 60px -20px rgba(15, 23, 42, 0.14);
+  padding: 40px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
   overflow: hidden;
-  box-shadow: 0 30px 60px -20px rgba(15, 23, 42, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  height: 480px;
-  background: #0f172a;
 }
 
-.hero-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  transform: scale(1.02);
-  transition: transform 0.8s ease;
-}
-
-/* Gradient fade at bottom of hero image to blend seamlessly into white background */
-.hero-image-fade {
+.hero-showcase-card::before {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.1) 40%, rgba(251, 252, 253, 0.95) 92%, #fbfcfd 100%);
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 70%);
   pointer-events: none;
 }
 
-/* --- Hero Floating Glass Cards (Matching Mockup Left) --- */
+.hero-tech-emblem-img {
+  max-height: 420px;
+  width: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 20px 30px rgba(15, 23, 42, 0.12));
+  transition: transform 0.6s ease;
+}
+
+.hero-tech-emblem-img:hover {
+  transform: scale(1.02);
+}
+
+/* Hero Floating Glass Cards */
 .floating-glass-card {
   position: absolute;
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.95);
-  box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.12), 0 0 1px rgba(0, 0, 0, 0.08);
   border-radius: var(--radius-md);
   z-index: 10;
   transition: transform var(--transition-smooth);
@@ -432,7 +447,7 @@ img {
   transform: translateY(-4px);
 }
 
-/* Left Hero Card: Donut Chart Widget */
+/* Left Hero Card: Donut Chart */
 .hero-card-left {
   top: 40px;
   left: -20px;
@@ -511,7 +526,7 @@ img {
   border-radius: 50%;
 }
 
-/* Right Hero Card: User / Metrics Widget */
+/* Right Hero Card: Customer Metric */
 .hero-card-right {
   top: 90px;
   right: -20px;
@@ -562,7 +577,7 @@ img {
 }
 
 .user-stat-val {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: #0284c7;
 }
@@ -586,7 +601,7 @@ img {
   height: 100%;
   background: linear-gradient(90deg, #38bdf8, #818cf8);
   border-radius: 9999px;
-  width: 82%;
+  width: 84%;
 }
 
 @media (max-width: 980px) {
@@ -603,8 +618,11 @@ img {
     margin: 16px auto 0;
     width: 90%;
   }
-  .hero-image-wrapper {
-    height: 340px;
+  .hero-showcase-card {
+    min-height: 360px;
+  }
+  .hero-tech-emblem-img {
+    max-height: 300px;
   }
 }
 
@@ -649,7 +667,6 @@ img {
   }
 }
 
-/* Insights 2-Column Showcase Container */
 .insights-showcase-box {
   background: #ffffff;
   border: 1px solid var(--color-border);
@@ -669,7 +686,6 @@ img {
   }
 }
 
-/* Left Interactive Items */
 .insights-tabs-list {
   display: flex;
   flex-direction: column;
@@ -708,10 +724,9 @@ img {
 .tab-item-desc {
   font-size: 0.9rem;
   color: var(--color-text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
-/* Active Dark Card (Matching Mockup "02 Predictive Insights") */
 .tab-item.active {
   background: #0f172a;
   color: #ffffff;
@@ -743,7 +758,6 @@ img {
   color: #94a3b8;
 }
 
-/* Right Analytics / Bar Chart Display Card */
 .analytics-display-card {
   background: linear-gradient(135deg, rgba(240, 249, 255, 0.6) 0%, rgba(253, 242, 248, 0.5) 100%);
   border: 1px solid rgba(255, 255, 255, 0.9);
@@ -790,7 +804,6 @@ img {
   margin-top: 6px;
 }
 
-/* Chart Container & Vertical Bars */
 .bar-chart-stage {
   margin-top: 36px;
   position: relative;
@@ -847,7 +860,6 @@ img {
   color: var(--color-text-subtle);
 }
 
-/* Trend Line SVG overlay */
 .chart-spline-svg {
   position: absolute;
   top: 0;
@@ -864,7 +876,7 @@ img {
 
 .section-headline-center {
   text-align: center;
-  max-width: 740px;
+  max-width: 760px;
   margin: 0 auto 54px auto;
 }
 
@@ -920,8 +932,8 @@ img {
 }
 
 .feature-icon-box img {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
@@ -951,7 +963,7 @@ img {
   color: #0284c7;
 }
 
-/* --- Section 4: Omni-Channel Bento Grid (Matches Middle & Bottom-Right Mockup) --- */
+/* --- Section 4: Omni-Channel Bento Grid (Matches Mockup) --- */
 .bento-section {
   background: #f8fafc;
 }
@@ -981,7 +993,7 @@ img {
   }
 }
 
-/* Bento Card 1: Unified Dashboard */
+/* Bento Card 1: Interactive Learning with KAT VR */
 .bento-card-dashboard {
   background: #ffffff;
   border: 1px solid var(--color-border);
@@ -1000,16 +1012,29 @@ img {
 
 .bento-card-dashboard p {
   font-size: 0.85rem;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.mini-chart-card {
-  background: #f8fafc;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+.katvr-preview-container {
+  background: radial-gradient(circle at center, #f1f5f9 0%, #e2e8f0 100%);
   border-radius: var(--radius-md);
-  padding: 16px;
-  position: relative;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
   overflow: hidden;
+}
+
+.katvr-preview-container img {
+  max-height: 170px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.katvr-preview-container:hover img {
+  transform: scale(1.05);
 }
 
 /* Bento Card 2: Collaborative (Dark Card with 3D Sphere Glow) */
@@ -1065,7 +1090,7 @@ img {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(30, 41, 59, 0.85);
+  background: rgba(30, 41, 59, 0.9);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-pill);
@@ -1085,11 +1110,11 @@ img {
   right: -10px;
 }
 
-/* Bento Card 3: From Single Assets to Empire (Span 2 Columns) */
+/* Bento Card 3: STEM Field Trip (Span 2 Columns) */
 .bento-card-empire {
   grid-column: span 2;
   background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 40%, #ffffff 100%);
-  border: 1px solid rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.2);
   border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: var(--shadow-sm);
@@ -1123,7 +1148,7 @@ img {
 
 .empire-preview-col {
   flex: 1;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: var(--radius-md);
@@ -1135,9 +1160,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  padding: 6px 0;
+  padding: 8px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -1145,15 +1170,15 @@ img {
   border-bottom: none;
 }
 
-/* Bento Card 4: Tall Right Card (Matches Right-Side Image Card in Mockup) */
+/* Bento Card 4: Tall Right Card Featuring Authentic VR Experience */
 .bento-card-tall {
   position: relative;
-  background: #0f172a;
+  background: #090d16;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-  min-height: 460px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  min-height: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1167,7 +1192,8 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.75;
+  object-position: center 25%;
+  opacity: 0.85;
   transition: transform 0.6s ease;
 }
 
@@ -1178,7 +1204,7 @@ img {
 .bento-tall-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.4) 60%, rgba(15, 23, 42, 0.2) 100%);
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.45) 55%, rgba(15, 23, 42, 0.25) 100%);
   pointer-events: none;
 }
 
@@ -1196,22 +1222,22 @@ img {
 
 .bento-tall-content p {
   color: #cbd5e1;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   max-width: 360px;
+  line-height: 1.55;
 }
 
-/* Floating Price / Tag Pills over image */
 .map-tags-container {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   align-items: flex-end;
 }
 
 .floating-tag-chip {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   color: #0f172a;
   font-size: 0.8rem;
@@ -1256,7 +1282,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.7;
+  opacity: 0.75;
   filter: grayscale(100%);
   transition: all var(--transition-fast);
 }
@@ -1423,11 +1449,11 @@ img {
 }
 
 .faq-item.active .faq-content {
-  max-height: 200px;
+  max-height: 220px;
   padding-bottom: 20px;
 }
 
-/* --- Section 8: Download App CTA Banner --- */
+/* --- Section 8: Lab Visit & Consultation CTA (Replaces Fake Mobile App Banner) --- */
 .cta-banner-section {
   background: var(--color-bg);
 }
@@ -1435,11 +1461,11 @@ img {
 .cta-banner-card {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   border-radius: var(--radius-xl);
-  padding: 60px 48px;
+  padding: 60px 52px;
   color: #ffffff;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -1449,51 +1475,57 @@ img {
 @media (max-width: 860px) {
   .cta-banner-card {
     grid-template-columns: 1fr;
-    padding: 40px 24px;
+    padding: 40px 28px;
   }
 }
 
 .cta-text-side h2 {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   color: #ffffff;
   margin-bottom: 16px;
+  line-height: 1.2;
 }
 
 .cta-text-side p {
   font-size: 1.05rem;
   color: #cbd5e1;
   margin-bottom: 32px;
+  line-height: 1.65;
 }
 
-.app-store-badges {
+.cta-buttons-row {
   display: flex;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-.app-store-badges a img {
-  height: 48px;
-  border-radius: 8px;
-  transition: transform var(--transition-fast);
-}
-
-.app-store-badges a:hover img {
-  transform: translateY(-2px);
-}
-
 .cta-image-side {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.cta-image-side img {
-  max-height: 320px;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+.cta-photo-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* --- Section 9: Footer (Matching Bottom-Right Mockup) --- */
+.cta-photo-box img {
+  max-height: 280px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+}
+
+/* --- Section 9: Footer --- */
 .site-footer {
   background: #ffffff;
   border-top: 1px solid var(--color-border);
@@ -1609,25 +1641,4 @@ img {
   color: var(--color-text-subtle);
   flex-wrap: wrap;
   gap: 16px;
-}
-
-/* --- Meta Verification Notice Banner (Subtle & Helpful) --- */
-.meta-verification-banner {
-  background: #f0fdf4;
-  border-bottom: 1px solid #bbf7d0;
-  padding: 8px 24px;
-  font-size: 0.78rem;
-  color: #166534;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-align: center;
-}
-
-.meta-verification-banner code {
-  background: #dcfce7;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
 }

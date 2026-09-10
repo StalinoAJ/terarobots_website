@@ -1,12 +1,12 @@
 /**
  * TeraRobots India - Main Interactive Script
- * Lightweight, zero-dependency, memory-efficient vanilla JavaScript
+ * Zero-dependency, memory-efficient vanilla JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Sync Meta Domain Verification if configured in SITE_CONFIG
   if (window.SITE_CONFIG && window.SITE_CONFIG.META_VERIFICATION_KEY && window.SITE_CONFIG.META_VERIFICATION_KEY !== "YOUR_META_BUSINESS_VERIFICATION_KEY") {
-    let metaTag = document.querySelector('meta[name="facebook-domain-verification"]');
+    const metaTag = document.querySelector('meta[name="facebook-domain-verification"]');
     if (metaTag) {
       metaTag.setAttribute('content', window.SITE_CONFIG.META_VERIFICATION_KEY);
     }
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close mobile menu on clicking any link
     mobileDrawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileDrawer.classList.remove('open');
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Interactive Insights Tabs & Dynamic Chart Update
+  // 3. Interactive Insights Tabs
   const insightTabs = document.querySelectorAll('.tab-item');
   const analyticsVal = document.getElementById('analyticsValue');
   const analyticsLabel = document.getElementById('analyticsLabel');
@@ -41,25 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const tabDatasets = {
     '01': {
-      label: 'Lab & Innovation Footprint',
-      value: '156k+',
-      trend: '↑ 24.8% new learners',
-      heights: ['45%', '60%', '55%', '85%', '95%', '70%', '50%'],
-      activeDayIdx: 4
+      label: 'Industrial Tours & Lab Explorations',
+      value: '2,291+',
+      trend: '↑ 18.4% institutional visits',
+      heights: ['40%', '60%', '55%', '80%', '95%', '70%', '45%']
     },
     '02': {
-      label: 'Active Engagements & Implementations',
-      value: '2,291+',
-      trend: '↑ 18.4% vs last term',
-      heights: ['35%', '50%', '42%', '75%', '90%', '65%', '40%'],
-      activeDayIdx: 4
-    },
-    '03': {
-      label: '3D Prototyped Components',
+      label: '3D Prototyped Components & Hardware',
       value: '4,850+',
       trend: '↑ 32.1% precision rate',
-      heights: ['50%', '65%', '70%', '80%', '92%', '85%', '60%'],
-      activeDayIdx: 4
+      heights: ['35%', '50%', '42%', '75%', '90%', '65%', '40%']
+    },
+    '03': {
+      label: 'STEM Field Trip Students Inspired',
+      value: '156k+',
+      trend: '↑ 26.5% community growth',
+      heights: ['50%', '65%', '70%', '85%', '92%', '80%', '60%']
     }
   };
 
@@ -72,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = tabDatasets[tabId];
 
       if (data && analyticsVal && analyticsLabel && analyticsTrend) {
-        // Animate value change
         analyticsVal.style.opacity = '0';
         setTimeout(() => {
           analyticsLabel.textContent = data.label;
@@ -81,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
           analyticsVal.style.opacity = '1';
         }, 150);
 
-        // Update bar pillars
         barPillars.forEach((bar, idx) => {
           if (data.heights[idx]) {
             bar.style.height = data.heights[idx];
@@ -98,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (header) {
       header.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
-        // Close other items
         faqItems.forEach(i => i.classList.remove('active'));
         if (!isActive) {
           item.classList.add('active');
@@ -123,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Number Counter Animation on Scroll (IntersectionObserver)
+  // 6. Number Counter Animation on Scroll
   const counterElements = document.querySelectorAll('[data-counter-target]');
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, obs) => {
@@ -132,9 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const el = entry.target;
           const target = parseFloat(el.getAttribute('data-counter-target'));
           const suffix = el.getAttribute('data-counter-suffix') || '';
-          const decimals = target % 1 !== 0 ? 1 : 0;
           let count = 0;
-          const duration = 1200;
+          const duration = 1000;
           const stepTime = 20;
           const totalSteps = duration / stepTime;
           const stepVal = target / totalSteps;
@@ -142,17 +134,17 @@ document.addEventListener('DOMContentLoaded', () => {
           const timer = setInterval(() => {
             count += stepVal;
             if (count >= target) {
-              el.textContent = target.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;
+              el.textContent = Math.round(target).toLocaleString() + suffix;
               clearInterval(timer);
             } else {
-              el.textContent = count.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals }) + suffix;
+              el.textContent = Math.round(count).toLocaleString() + suffix;
             }
           }, stepTime);
 
           obs.unobserve(el);
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     counterElements.forEach(el => observer.observe(el));
   }
