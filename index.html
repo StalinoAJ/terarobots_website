@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- ========================================================================= -->
+  <!-- META BUSINESS / FACEBOOK DOMAIN VERIFICATION                              -->
+  <!-- Place your Meta Domain Verification Key below in the 'content' attribute. -->
+  <!-- Example: <meta name="facebook-domain-verification" content="abc123xyz" />  -->
+  <!-- ========================================================================= -->
+  <meta name="facebook-domain-verification" content="YOUR_META_BUSINESS_VERIFICATION_KEY" />
+  
+  <title>TeraRobots India — Powering Industry 4.0 Era</title>
+  <meta name="description" content="TeraRobots - Empowering Industry 4.0 with Robotics, Automation, IoT, AI, and 3D printing. Experience immersive VR and STEM Field Trips.">
+  <meta name="keywords" content="TeraRobots, Industry 4.0, Robotics, Automation, IoT, AI, 3D printing, STEM Field Trip, VR Experiences, Kochi, Kakkanad, India">
+  <meta name="author" content="TeraRobots India">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TeraRobots India — Powering Industry 4.0 Era">
+  <meta property="og:description" content="Empowering Industry 4.0 with Robotics, Automation, IoT, AI, and 3D printing.">
+  <meta property="og:image" content="./assets/images/hero-banner.webp">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="./assets/images/logo-icon.webp">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Newsreader italic accent -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- 1. FLOATING PILL NAVIGATION (Matches the reference UI)                    -->
+  <!-- ========================================================================= -->
+  <header class="nav-wrapper">
+    <nav class="nav-pill" aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+      </ul>
+      
+      <!-- Center Pill Emblem / Logo -->
+      <a href="#home" class="nav-brand-icon" title="TeraRobots India Home">
+        <img src="./assets/images/logo-icon.webp" alt="TeraRobots Logo Icon">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#vr-stem" class="nav-link">VR & STEM</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="nav-mobile-toggle" id="mobileNavToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="#home">Home</a>
+    <a href="#services">Our Services</a>
+    <a href="#features">Features</a>
+    <a href="#vr-stem">VR & STEM Field Trips</a>
+    <a href="#about">About TeraRobots</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#faq">Frequently Asked Questions</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SECTION (Matches Left Mockup)                                     -->
+    <!-- ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-header">
+          <div class="badge-row" style="justify-content: center;">
+            <span class="pill-badge badge-green">Powering Industry 4.0 Era 🔥</span>
+            <span class="pill-badge badge-blue">Innovation Hub</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Discover high-growth<br>
+            Industry 4.0 <span class="italic-accent">Robotics & AI</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            TeraRobots — Empowering Industry 4.0 with Robotics, Automation, IoT, AI, and 3D printing. Step into the future of intelligent engineering.
+          </p>
+          
+          <div class="hero-cta">
+            <a href="#services" class="btn btn-dark">
+              Start exploring now
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Stage with Floating Glass Cards -->
+        <div class="hero-stage-container">
+          <!-- Left Glass Card: Donut Chart Widget (Matches Reference Mockup) -->
+          <div class="floating-glass-card hero-card-left">
+            <div class="card-mini-header">
+              <span>Technology Domain</span>
+              <span style="color:#0284c7;">Active</span>
+            </div>
+            <div class="donut-chart-container">
+              <div class="donut-svg-wrapper">
+                <svg class="donut-svg" viewBox="0 0 36 36">
+                  <!-- Background Circle -->
+                  <path stroke="rgba(0,0,0,0.06)" stroke-width="3.5" fill="none"
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <!-- Slice 1: 74% (Robotics/Green) -->
+                  <path stroke="#10b981" stroke-dasharray="45, 100" stroke-width="3.8" stroke-linecap="round" fill="none"
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <!-- Slice 2: 25% (AI/Blue) -->
+                  <path stroke="#0284c7" stroke-dasharray="25, 100" stroke-dashoffset="-45" stroke-width="3.8" stroke-linecap="round" fill="none"
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  <!-- Slice 3: 15% (IoT/Purple) -->
+                  <path stroke="#8b5cf6" stroke-dasharray="15, 100" stroke-dashoffset="-70" stroke-width="3.8" stroke-linecap="round" fill="none"
+                    d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                </svg>
+                <div class="donut-center-text">
+                  <span>74</span>
+                  <span class="donut-center-sub">%</span>
+                </div>
+              </div>
+              <div class="donut-legend">
+                <div class="donut-legend-item">
+                  <span class="legend-dot" style="background:#10b981;"></span>
+                  <span>Robotics 74%</span>
+                </div>
+                <div class="donut-legend-item">
+                  <span class="legend-dot" style="background:#0284c7;"></span>
+                  <span>AI & IoT 62%</span>
+                </div>
+                <div class="donut-legend-item">
+                  <span class="legend-dot" style="background:#8b5cf6;"></span>
+                  <span>3D Print 25%</span>
+                </div>
+                <div class="donut-legend-item">
+                  <span class="legend-dot" style="background:#f59e0b;"></span>
+                  <span>VR Labs 13%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image with Bottom Gradient Fade -->
+          <div class="hero-image-wrapper">
+            <img src="./assets/images/hero-banner.webp" alt="TeraRobots Industry 4.0 Advanced Robotics Facility" loading="eager">
+            <div class="hero-image-fade"></div>
+          </div>
+
+          <!-- Right Glass Card: Customer Community & Rating (Matches Reference Mockup) -->
+          <div class="floating-glass-card hero-card-right">
+            <div class="user-metric-row">
+              <div class="user-avatar-pill">
+                <img src="./assets/images/user-group.webp" alt="TeraRobots Community Members">
+              </div>
+              <div class="user-metric-info">
+                <div class="user-metric-name">TeraRobots Community</div>
+                <div class="user-metric-sub">Industry 4.0 Network</div>
+              </div>
+              <div class="user-metric-stat">
+                <div class="user-stat-val" data-counter-target="2291" data-counter-suffix="+">2,291+</div>
+                <div class="user-stat-tag">4.8/5.0 ★ Rating</div>
+              </div>
+            </div>
+            <div class="metric-bar-progress">
+              <div class="metric-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. DATA-DRIVEN INSIGHTS SECTION (Matches Bottom-Left Mockup)              -->
+    <!-- ========================================================================= -->
+    <section class="section insights-section" id="features">
+      <div class="container">
+        <div class="badge-row">
+          <span class="pill-badge badge-green">INNOVATION</span>
+          <span class="pill-badge badge-pink">EXCLUSIVE</span>
+        </div>
+
+        <div class="insights-header-grid">
+          <div>
+            <h2 class="insights-title">
+              Data-driven robotics<br>
+              <span class="italic-accent">insights</span>
+            </h2>
+          </div>
+          <div>
+            <p class="insights-desc">
+              Our platform leverages smart analytics and industry trends to help you find high-potential technologies. We combine real-world robotics, IoT automation, and 3D printing with intuitive visual dashboards so you can pinpoint innovation poised for growth.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2-Column Showcase Box -->
+        <div class="insights-showcase-box">
+          <!-- Left Column: Numbered Tabs -->
+          <div class="insights-tabs-list">
+            <div class="tab-item" data-tab-id="01">
+              <div class="tab-item-num">01. Market & Tech Analytics</div>
+              <h3 class="tab-item-title">Explore Robotics Innovation</h3>
+              <p class="tab-item-desc">
+                Analyze real-world tech innovations, automated workflows, and Industry 4.0 shifts to pinpoint high-growth technological zones before the competition.
+              </p>
+            </div>
+
+            <!-- Active Dark Card (Matches Mockup "02 Predictive Insights") -->
+            <div class="tab-item active" data-tab-id="02">
+              <div class="tab-item-num">02. Predictive Robotics & AI</div>
+              <h3 class="tab-item-title">Autonomous Process Modeling</h3>
+              <p class="tab-item-desc">
+                Use AI-driven robotics, intelligent IoT sensor systems, and smart automation to optimize productivity and accelerate technological transformation.
+              </p>
+            </div>
+
+            <div class="tab-item" data-tab-id="03">
+              <div class="tab-item-num">03. 3D Prototyping & Project Support</div>
+              <h3 class="tab-item-title">Actionable Hardware Prototyping</h3>
+              <p class="tab-item-desc">
+                Receive clear, data-backed engineering roadmaps. Accelerate hardware development with additive manufacturing and dedicated project support.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Light Glass Analytics Card -->
+          <div class="analytics-display-card">
+            <div class="analytics-top-row">
+              <div>
+                <div class="analytics-label" id="analyticsLabel">Active Engagements & Implementations</div>
+                <div class="analytics-value" id="analyticsValue">2,291+</div>
+                <div class="analytics-trend" id="analyticsTrend">↑ 18.4% vs last term</div>
+              </div>
+              <div class="pill-badge badge-blue">Real-Time</div>
+            </div>
+
+            <!-- Bar Chart Display -->
+            <div class="bar-chart-stage">
+              <!-- Spline SVG Overlay -->
+              <svg class="chart-spline-svg" viewBox="0 0 320 140" preserveAspectRatio="none">
+                <path d="M 20 90 Q 65 70 110 80 T 200 40 T 290 60" fill="none" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="4 4" opacity="0.6"/>
+              </svg>
+
+              <div class="bar-col">
+                <div class="bar-pillar" style="height: 35%;"></div>
+                <span class="bar-day-label">Mon</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-pillar" style="height: 50%;"></div>
+                <span class="bar-day-label">Tue</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-pillar" style="height: 42%;"></div>
+                <span class="bar-day-label">Wed</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-pillar" style="height: 75%;"></div>
+                <span class="bar-day-label">Thu</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-pillar active-pillar" style="height: 90%;"></div>
+                <span class="bar-day-label" style="font-weight:700; color:#0f172a;">Fri</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-pillar" style="height: 65%;"></div>
+                <span class="bar-day-label">Sat</span>
+              </div>
+              <div class="bar-col">
+                <div class="bar-pillar" style="height: 40%;"></div>
+                <span class="bar-day-label">Sun</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. THREE FEATURE CARDS (Matches Top-Right Mockup)                          -->
+    <!-- ========================================================================= -->
+    <section class="section feature-row-section" id="services">
+      <div class="container">
+        <div class="section-headline-center">
+          <div class="badge-row" style="justify-content: center;">
+            <span class="pill-badge badge-blue">OUR CORE SERVICES</span>
+          </div>
+          <h2>
+            Shape Today's Future with a<br>
+            <span class="italic-accent">Next-Gen</span> Robotics Ecosystem
+          </h2>
+          <p>
+            Experience hands-on industry training, high-precision manufacturing, and applied robotics designed for tomorrow's pioneers.
+          </p>
+        </div>
+
+        <div class="feature-cards-grid">
+          <!-- Card 1: Industrial Tours -->
+          <div class="feature-card">
+            <div>
+              <div class="feature-icon-box">
+                <img src="./assets/images/service-industrial-tours.webp" alt="Industrial Tours Icon">
+              </div>
+              <h3>Industrial Tours</h3>
+              <p>
+                Step inside live industrial automated setups. Discover how robotics, IoT sensors, and computer vision drive high-efficiency assembly lines in Industry 4.0 factories.
+              </p>
+            </div>
+            <a href="#contact" class="feature-card-link">
+              Find more
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Card 2: 3D Printing -->
+          <div class="feature-card">
+            <div>
+              <div class="feature-icon-box">
+                <img src="./assets/images/service-3d-printing.webp" alt="3D Printing Icon">
+              </div>
+              <h3>3D Printing & Prototyping</h3>
+              <p>
+                Rapid additive manufacturing for custom robotics parts, educational kits, and functional prototypes with high-grade precision polymers and precision infill.
+              </p>
+            </div>
+            <a href="#contact" class="feature-card-link">
+              Find more
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Card 3: Technology Courses -->
+          <div class="feature-card">
+            <div>
+              <div class="feature-icon-box">
+                <img src="./assets/images/service-tech-courses.webp" alt="Technology Courses Icon">
+              </div>
+              <h3>Technology Courses & Camps</h3>
+              <p>
+                Comprehensive hands-on training in Embedded Systems, ROS, AI Vision, Industrial Automation, and immersive STEM bootcamps led by industry experts.
+              </p>
+            </div>
+            <a href="#contact" class="feature-card-link">
+              Find more
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. OMNI-CHANNEL BENTO GRID (Matches Middle & Bottom-Right Mockup)         -->
+    <!-- ========================================================================= -->
+    <section class="section bento-section" id="vr-stem">
+      <div class="container">
+        <div class="section-headline-center">
+          <div class="badge-row" style="justify-content: center;">
+            <span class="pill-badge badge-pink">PORTFOLIO TOOLS</span>
+          </div>
+          <h2>
+            Omni-channel, any task,<br>
+            <span class="italic-accent">multi-technology</span>
+          </h2>
+          <p>
+            Step into a new dimension of learning and exploration with our immersive Virtual Reality solutions. Experience education, design, and innovation like never before — where the virtual meets the real.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Left Column (Grid of 3 cards) -->
+          <div class="bento-left-col">
+            
+            <!-- Bento 1: Unified Dashboard -->
+            <div class="bento-card-dashboard">
+              <div>
+                <span class="pill-badge badge-blue" style="margin-bottom:12px;">IOT MONITORING</span>
+                <h3>Unified Dashboard</h3>
+                <p>Track all your robotics projects, sensor income, and growth metrics in one intuitive interface.</p>
+              </div>
+              <div class="mini-chart-card">
+                <img src="./assets/images/dashboard-ui.webp" alt="TeraRobots Unified Dashboard Preview" style="border-radius:8px;">
+              </div>
+            </div>
+
+            <!-- Bento 2: Collaborative Dark Card with Glowing Sphere -->
+            <div class="bento-card-collab">
+              <div>
+                <span class="pill-badge badge-dark" style="margin-bottom:12px;">MULTI-USER VR</span>
+                <h3>Collaborative Labs</h3>
+                <p>Connected sub-agents and learners work together seamlessly to handle complex robotics simulations.</p>
+              </div>
+              <div class="sphere-glow-container">
+                <div class="sphere-wireframe">
+                  <div class="floating-avatar-badge badge-top-left">
+                    <span style="color:#38bdf8;">●</span> John Doe
+                  </div>
+                  <div class="floating-avatar-badge badge-bottom-right">
+                    <span style="color:#ec4899;">●</span> Sophia
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento 3: STEM Field Trip (Span 2 Columns) -->
+            <div class="bento-card-empire">
+              <div class="empire-text-col">
+                <span class="pill-badge badge-green" style="margin-bottom:12px;">A DAY WITH INNOVATION</span>
+                <h3>STEM Field Trips</h3>
+                <p>
+                  From simple circuits to industrial automation. Our coordinated sessions handle the complexities of robotics, leaving you with nothing but inspired minds.
+                </p>
+                <a href="#contact" class="btn btn-dark">
+                  Book a field trip
+                </a>
+              </div>
+              
+              <div class="empire-preview-col">
+                <div class="preview-row">
+                  <span>01. DISCOVER</span>
+                  <span style="color:#0284c7;">Explore Labs</span>
+                </div>
+                <div class="preview-row">
+                  <span>02. CREATE</span>
+                  <span style="color:#10b981;">Robots & 3D Print</span>
+                </div>
+                <div class="preview-row">
+                  <span>03. INSPIRE</span>
+                  <span style="color:#8b5cf6;">Expert Mentors</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Tall Showcase Image Card (Matches Mockup Right Image) -->
+          <div class="bento-card-tall">
+            <img src="./assets/images/vr-showcase.webp" alt="TeraRobots VR Innovation Lab" class="bento-bg-img" loading="lazy">
+            <div class="bento-tall-overlay"></div>
+
+            <div class="map-tags-container">
+              <div class="floating-tag-chip">
+                <span>🥽</span> Interactive Learning
+              </div>
+              <div class="floating-tag-chip">
+                <span>⚙️</span> Real-World Simulations
+              </div>
+              <div class="floating-tag-chip">
+                <span>🚀</span> Custom VR Content
+              </div>
+            </div>
+
+            <div class="bento-tall-content">
+              <span class="pill-badge badge-green" style="margin-bottom:12px;">IMMERSIVE REALITY</span>
+              <h3>Smart Labs.<br>Smarter Innovation.</h3>
+              <p>Data-driven insights to help you build the future with robotics and immersive virtual simulations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. BRAND PARTNERS MARQUEE (From terarobots.in)                            -->
+    <!-- ========================================================================= -->
+    <section class="partners-section">
+      <div class="container">
+        <div class="partners-title">Our Customers & Educational Partners</div>
+        <div class="partners-grid">
+          <div class="partner-logo-item"><img src="./assets/images/client-1.webp" alt="Partner Organization 1" loading="lazy"></div>
+          <div class="partner-logo-item"><img src="./assets/images/client-2.webp" alt="Partner Organization 2" loading="lazy"></div>
+          <div class="partner-logo-item"><img src="./assets/images/client-3.webp" alt="Partner Organization 3" loading="lazy"></div>
+          <div class="partner-logo-item"><img src="./assets/images/client-4.webp" alt="Partner Organization 4" loading="lazy"></div>
+          <div class="partner-logo-item"><img src="./assets/images/client-5.webp" alt="Partner Organization 5" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. TESTIMONIALS (From terarobots.in)                                      -->
+    <!-- ========================================================================= -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-headline-center">
+          <div class="badge-row" style="justify-content: center;">
+            <span class="pill-badge badge-purple">TESTIMONIALS 🔥</span>
+          </div>
+          <h2>
+            What our clients <span class="italic-accent">say?</span>
+          </h2>
+          <p>
+            Trusted by tech leaders, engineering departments, and institutional directors across the country.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">
+                <img src="./assets/images/rating-stars.webp" alt="5 Star Rating">
+              </div>
+              <p class="testimonial-text">
+                "TeraRobots has transformed the way our students experience Industry 4.0. The hands-on robotics workshops and 3D printing labs provided unmatched practical clarity."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="./assets/images/user-1.webp" alt="John Doe">
+              </div>
+              <div>
+                <div class="author-name">John Doe</div>
+                <div class="author-role">Team Leader & Technical Coordinator</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">
+                <img src="./assets/images/rating-stars.webp" alt="5 Star Rating">
+              </div>
+              <p class="testimonial-text">
+                "The immersive Virtual Reality simulations and STEM field trips were an absolute game-changer. Our team gained real-world insight into automation and smart manufacturing."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="./assets/images/user-2.webp" alt="Sophia">
+              </div>
+              <div>
+                <div class="author-name">Sophia</div>
+                <div class="author-role">Team Leader & Innovation Mentor</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">
+                <img src="./assets/images/rating-stars.webp" alt="5 Star Rating">
+              </div>
+              <p class="testimonial-text">
+                "Outstanding project support and rapid 3D prototyping. Their robotics engineering team helped us accelerate our hardware deployment seamlessly from concept to prototype."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <img src="./assets/images/user-3.webp" alt="Alex Carter">
+              </div>
+              <div>
+                <div class="author-name">Alex Carter</div>
+                <div class="author-role">Team Leader & Robotics Specialist</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. FREQUENTLY ASKED QUESTIONS (From terarobots.in)                         -->
+    <!-- ========================================================================= -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="faq-grid">
+          <div>
+            <div class="badge-row">
+              <span class="pill-badge badge-blue">FAQS 🔥</span>
+            </div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">
+              Frequently Asked<br>
+              <span class="italic-accent">Questions</span>
+            </h2>
+            <p style="margin-bottom: 32px;">
+              Find answers regarding our Industry 4.0 programs, immersive VR labs, robotics courses, and prototyping support.
+            </p>
+            <div style="max-width: 320px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+              <img src="./assets/images/faq-hero.webp" alt="TeraRobots FAQ Support" loading="lazy">
+            </div>
+          </div>
+
+          <div class="faq-accordion-list">
+            <!-- FAQ 1 -->
+            <div class="faq-item active">
+              <div class="faq-header">
+                <span>Looking for a solution to boost productivity?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                TeraRobots provides custom Industry 4.0 automation, IoT sensor networks, and robotic integration to help organizations eliminate repetitive bottlenecks, increase accuracy, and significantly boost operational productivity.
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <span>Need an easy way to manage your hardware projects?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                Our Project Support and 3D printing facilities offer comprehensive end-to-end guidance from CAD design and component fabrication to firmware development and systems integration.
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <span>Seeking a user-friendly solution for your team or school?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                Our STEM Field Trips and Technology Courses are tailored for all learning stages. We offer interactive learning, real-world simulations, and hands-on robotics workshops guided by veteran instructors.
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <div class="faq-header">
+                <span>How can institutions book a STEM Field Trip or Industrial Tour?</span>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-content">
+                You can reach out directly via our contact form, email us at hrteam@teraobjects.com, or call +91 8089637009 to schedule customized lab tours and hands-on sessions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9. CTA BANNER: DOWNLOAD APP / GET STARTED (From terarobots.in)            -->
+    <!-- ========================================================================= -->
+    <section class="section cta-banner-section" id="about">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-text-side">
+            <span class="pill-badge badge-dark" style="margin-bottom: 16px;">OUR MOBILE APP 🔥</span>
+            <h2>Download our app and start your journey today!</h2>
+            <p>
+              Access interactive robotics modules, manage IoT sensors, and book immersive VR sessions straight from your smartphone.
+            </p>
+            <div class="app-store-badges">
+              <a href="#contact" title="Get it on Google Play">
+                <img src="./assets/images/playstore.webp" alt="Google Play Store">
+              </a>
+              <a href="#contact" title="Download on App Store">
+                <img src="./assets/images/appstore.webp" alt="Apple App Store">
+              </a>
+            </div>
+          </div>
+
+          <div class="cta-image-side">
+            <img src="./assets/images/app-banner.webp" alt="TeraRobots App Interface Preview" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 10. FOOTER (Matches Bottom-Right Mockup)                                  -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="#home">
+            <img src="./assets/images/logo.webp" alt="TeraRobots India" class="footer-logo">
+          </a>
+          <p>
+            TeraRobots — Empowering Industry 4.0 with Robotics, Automation, IoT, AI, and 3D printing. Industry 4.0 Redefined.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://facebook.com" class="social-icon-btn" title="Facebook" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/images/facebook.webp" alt="Facebook">
+            </a>
+            <a href="https://twitter.com" class="social-icon-btn" title="Twitter" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/images/twitter.webp" alt="Twitter">
+            </a>
+            <a href="https://linkedin.com" class="social-icon-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/images/linkedin.webp" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com" class="social-icon-btn" title="Instagram" target="_blank" rel="noopener noreferrer">
+              <img src="./assets/images/instagram.webp" alt="Instagram">
+            </a>
+          </div>
+        </div>
+
+        <!-- Products / Services Column -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Industrial Tours</a></li>
+            <li><a href="#services">3D Printing</a></li>
+            <li><a href="#services">Technology Courses</a></li>
+            <li><a href="#services">Tech Camps</a></li>
+            <li><a href="#services">Project Support</a></li>
+            <li><a href="#services">Workshops & Events</a></li>
+          </ul>
+        </div>
+
+        <!-- Innovation / Quick Links Column -->
+        <div class="footer-col">
+          <h4>Innovation</h4>
+          <ul class="footer-links">
+            <li><a href="#vr-stem">Immersive VR Solutions</a></li>
+            <li><a href="#vr-stem">STEM Field Trips</a></li>
+            <li><a href="#features">Robotics & AI</a></li>
+            <li><a href="#features">IoT Systems</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Address Column (Exact from terarobots.in) -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>TeraRobots India<br>Rajagiri Valley Road, Kakkanad, Kochi, Kerala, India</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <a href="mailto:hrteam@teraobjects.com">hrteam@teraobjects.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <a href="tel:+918089637009">+91 8089637009</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2025 TeraRobots India. All rights reserved. | <a href="#privacy" style="text-decoration: underline;">Privacy Policy</a>
+        </div>
+        <div style="font-size: 0.78rem;">
+          Meta Business Verified Domain & GitHub Pages Ready
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Configuration and Main Interactions -->
+  <script src="./assets/js/config.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
