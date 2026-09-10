@@ -256,28 +256,24 @@ img {
   color: var(--color-text-main);
 }
 
-.nav-brand-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #0f172a;
+.nav-brand-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform var(--transition-fast);
+  padding: 2px 10px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
-.nav-brand-icon:hover {
-  transform: scale(1.08);
+.nav-brand-logo:hover {
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
-.nav-brand-icon img {
-  width: 26px;
+.menu-logo-img {
   height: 26px;
+  max-width: 190px;
+  width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
 .nav-mobile-toggle {
