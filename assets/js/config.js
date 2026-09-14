@@ -9,7 +9,7 @@
 window.SITE_CONFIG = {
   // Meta / Facebook Domain Verification Key
   // Paste your key between the quotes (e.g. "abc123xyz789...")
-  META_VERIFICATION_KEY: "YOUR_META_BUSINESS_VERIFICATION_KEY",
+  META_VERIFICATION_KEY: t8sfxu88fx73cxg516u23a0mj17bsc,
 
   // Business Information (from https://terarobots.in/)
   COMPANY_NAME: "TeraRobots India",
